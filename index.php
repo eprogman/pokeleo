@@ -11,7 +11,7 @@ require './const.php';
 
 if (isset($_GET['pokemon'])) {
 
-    $params =  $_GET['pokemon'];
+    $params =  strtolower($_GET['pokemon']);
     $API_URL = get_api($params);
 
     $result = ViewNewPokemon::fetch_url_api($API_URL);

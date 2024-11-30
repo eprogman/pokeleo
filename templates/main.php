@@ -9,9 +9,12 @@
         <img src="<?php echo $pokemon ?>" alt="">
         <h1 class="nombre">Su nombre es : <span><?php echo $name; ?></span></h1>
         <h2 class="nivel">Tiene el nivel de experiancia : <span><?php echo $base_experience; ?></span></h2>
+        <h2 class="nivel">Es del tipo : <span><?php echo $tipo; ?></span></h2>
     </div>
     <div class="nivel_mov">
         <h2 class="mov">Tiene los siguientes movimientos: <span><?php echo implode("  ,  ", $moves); ?></span></h2>
-        <h2 class="habi">Tiene las siguieetes habilidades: <span><?php echo implode("  ,  ", $habilidades); ?></span></h2>
+        <h2 class="habi">Tiene las siguientes habilidades: <span><?php echo implode("  ,  ", $habilidades); ?></span></h2>
+        <h2 class="habi">Tiene las siguientes estadisticas: <span><?php echo implode("  ,  ", $estadisticas); ?></span></h2>
     </div>
+
 </main>

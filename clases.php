@@ -10,7 +10,9 @@ class ViewNewPokemon
         private string $name,
         private int $base_experience,
         private array $moves,
-        private array $habilidades
+        private array $habilidades,
+        private string $tipo,
+        private array $estadisticas
 
     ) {}
 
@@ -33,12 +35,20 @@ class ViewNewPokemon
         }
         $abilities = array_map("abilities",   $data['abilities']);
 
+        function stats($estadisticas)
+        {
+            return $estadisticas['stat']['name'];
+        }
+        $estadisticas = array_map("stats",   $data['stats']);
+
         return new self(
             $data['sprites']['other']['official-artwork']['front_default'],
             $data['name'],
             $data['base_experience'],
             $movimientos,
-            $abilities
+            $abilities,
+            $data['types'][0]['type']['name'],
+            $estadisticas
 
 
         );
