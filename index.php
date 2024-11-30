@@ -1,12 +1,13 @@
 
 <?php
 
+ini_set('display_errors', 0);
+
 require './funciones.php';
 require './clases.php';
 require './styles.php';
 require './api.php';
 require './const.php';
-
 
 if (isset($_GET['pokemon'])) {
 
