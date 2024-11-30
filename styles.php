@@ -6,26 +6,30 @@
         color-scheme: dark;
     }
 
-    *,
-    ::after,
-    ::before {
+    html {
         box-sizing: border-box;
+        font-size: 62.5%;
     }
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+
+    }
+
 
     body {
         margin: 0;
         padding: 0;
-        font-size: 62.5%;
-        box-sizing: inherit;
     }
 
     .container {
+        font-family: "Lacquer", system-ui;
+        padding: 40px;
         display: grid;
         place-content: center;
-        font-family: "Lacquer", system-ui;
-        margin: auto;
-        padding: 40px;
-        margin-top: 40px;
     }
 
     .main {
@@ -111,5 +115,39 @@
         color: yellowgreen;
         font-size: 1.5em;
         letter-spacing: 0.1em;
+    }
+
+    @media (max-width:584px) {
+
+        .container {
+
+            margin: auto;
+            padding: 0 20px 0 20px;
+            font-size: 0.8em;
+
+        }
+
+        label,
+        input,
+        button {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+
+        }
+
+        .nivel_mov {
+            width: 80%;
+            margin: auto;
+        }
+
+        .mov span {
+            font-size: 1em;
+        }
+
+        .habi span {
+            font-size: 1em;
+        }
+
     }
 </style>
